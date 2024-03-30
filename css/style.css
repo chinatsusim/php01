@@ -1,27 +1,105 @@
-html::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-html{
-  max-height: 100vh!important;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  overflow-y: scroll;
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "segoe UI", "Noto Sans JP", sans-serif !important;
+  color: #495057;
 }
 
-body{
-  width: 900px;
-  font-family: "jost", "Zen Kaku Gothic New", sans-serif !important;
-  color:#343434;
-  max-width: 100%;
-  margin:auto;
-  background-color: #FFF;
+/* メニュー */
+header {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-right: solid #c8c8c8 1px;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
   padding: 20px;
+  font-size: 14px;
+  color:#495057;
 }
+
+.logo {
+  margin-bottom: 10px;
+}
+
+.logo img{
+  height: 24px;
+}
+
+/* メインメニュー */
+.menu {
+  padding-top:30px;
+  padding-left: 0;
+}
+
+/* 各メニュー項目のスタイル */
+.menu li {
+  list-style: none;
+  padding: 10px 20px;
+  margin-left: -20px;
+  border-radius: 0 10px 10px 0;
+  transition: background-color 0.2s;
+}
+
+/* アクティブなメニュー項目のスタイル */
+.menu li.active {
+  background-color: #1ADCF7;
+  color: #fff!important;
+}
+
+/* メニュー項目のホバースタイル */
+.menu li:hover {
+  background-color: #1ADCF7;
+  color: #fff!important;
+  cursor: pointer;
+}
+
+.menu a {
+  text-decoration: none;
+  color:#495057;
+}
+/* 下寄せメニュー */
+.bottom-menu {
+  margin-top: auto;
+  margin-bottom:50px;
+}
+
+.material-symbols-outlined { 
+  color:#495057;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right:5px;
+  font-size: 10px;
+}
+
+/* メインコンテンツ */
+main {
+  margin-left: 190px;
+  background-color: #f0f2f5;
+  padding: 20px;
+  padding-top:5px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+
+h2 {
+  font-size: 18px;
+  color: #343434;
+  font-weight: 600;
+}
+
+
 
 form {
-  background-color: #fefdf1;
+  background-color: #fff;
   padding: 20px;
-  border:1px solid #b1b1b1;
+  /* border:1px solid #e1e1e1; */
 }
 
 .form-group {
@@ -62,7 +140,7 @@ input[type="checkbox"] {
 }
 
 .capabilities label {
-  margin-bottom: 0; /* 設問タイトルのマージンを無効化 */
+  margin-bottom: 0;
 }
 
 .choice {
@@ -71,7 +149,7 @@ input[type="checkbox"] {
 }
 
 button {
-  background-color: #007bff;
+  background-color: #1ADCF7;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -84,31 +162,86 @@ button:hover {
   background-color: #0056b3;
 }
 
-table{
+table {
   font-size: 10px;
   width: 100%;
-  border-collapse: collapse;
+  border-spacing: 0;
   background-color: #ffffff;
   margin: 20px 0;
-  border:1px solid #b1b1b1;
+  border-radius: 3px;
+  border:none;
 }
 
 th {
-  background-color: #d8e9fb;
-  color: #343a40;
-  text-align: left;
-  padding: 16px;
-  border-bottom: 2px solid #dee2e6;
+  background-color: #F1E9D3;
+  color: #343434;
+  padding: 8px;
+  width: 20px;
+  border:none;
+}
+
+th:first-child {
+  border-top-left-radius: 3px;
+}
+
+th:last-child {
+  border-top-right-radius: 3px;
 }
 
 td {
   padding: 12px 16px;
   color: #495057;
-  border-bottom: 1px solid #dee2e6;
+  border: none;
+  text-align: center;
 }
 
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+
 tr:hover {
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
+}
+
+.totalling{
+  display: flex;
+  margin: 30px 0;
+}
+
+.rate{
+  background-color: #fff;
+  height: 60px;
+  width: 120px;
+  padding: 6px;
+  margin-right: 14px;
+}
+
+.item{
+  font-size:12px;
+  text-align: center;
+}
+
+.num{
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.advice{
+  margin: 30px 0;
+  background-color: #fff;
+  padding: 14px;
+  font-size:12px;
+  line-height:20px;
+}
+
+.adviceTitle{
+  font-size:12px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 footer{
@@ -116,21 +249,14 @@ footer{
   color:#343434;
   text-align: center;
   margin: auto;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  right: 0; 
 }
 
-h1 {
-  font-size: 24px;
-  color: #32325d;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 2px solid #e6ecf5;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 20px;
-  color: #32325d;
-
-  font-weight: 500;
+.msg{
+  font-size:14px;
+  color:#343434;
 }
 
