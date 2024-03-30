@@ -1,0 +1,136 @@
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+html{
+  max-height: 100vh!important;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
+
+body{
+  width: 900px;
+  font-family: "jost", "Zen Kaku Gothic New", sans-serif !important;
+  color:#343434;
+  max-width: 100%;
+  margin:auto;
+  background-color: #FFF;
+  padding: 20px;
+}
+
+form {
+  background-color: #fefdf1;
+  padding: 20px;
+  border:1px solid #b1b1b1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 50%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.capabilities > label {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.capabilities div {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.capabilities label {
+  margin-bottom: 0; /* 設問タイトルのマージンを無効化 */
+}
+
+.choice {
+  font-size:11px;
+  font-weight: 300!important;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table{
+  font-size: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  margin: 20px 0;
+  border:1px solid #b1b1b1;
+}
+
+th {
+  background-color: #d8e9fb;
+  color: #343a40;
+  text-align: left;
+  padding: 16px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+td {
+  padding: 12px 16px;
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+footer{
+  font-size:10px;
+  color:#343434;
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  font-size: 24px;
+  color: #32325d;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e6ecf5;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 20px;
+  color: #32325d;
+
+  font-weight: 500;
+}
+
